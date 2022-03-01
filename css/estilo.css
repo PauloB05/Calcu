@@ -1,23 +1,41 @@
 body {
-    margin:200px;
+    margin:20px;
       background-color:aliceblue;
+      
     }
     
-  .numero {
-      color:green
-      
-  }
-  
+
+
   .container{
-  text-align: center;
+  align-items: center;
+  background-color: rgb(235, 225, 225);
+  padding: 20px;
+border-color: #000;
   }
       
-  .col {
-    margin-top: 20px;
-  }
   
-  #numero {
+  .numero {
+    
+    width: 60px;
+    height: 50px;
+    background-color: aliceblue;
     border: 1px solid #000;
     text-align: center;
- 
+  }
+
+  #pantalla{
+    width : 250px;
+    text-align: center;
+    
+    border-color: #000;
+    padding-left: 20px;
+    background-color:aliceblue;
+    color: crimson;
+  }
+  .numero1 {
+    width: 250px;
+    height: 30px;
+    background-color: aliceblue;
+    border: 1px solid #000;
+    text-align: center;
   }

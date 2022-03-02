@@ -17,12 +17,12 @@ const division = document.querySelector("#division");
 const multiplicacion = document.querySelector("#multiplicacion");
 const ce = document.querySelector("#ce");
 const igual = document.querySelector("#igual");
-const valo1 =0;
-const valor2 =0;
-
+var valor1;
+var simbolo;
 
 uno.onclick = function uno () {
-    pantalla.value = pantalla.value + "1"
+    pantalla.value = pantalla.value + "1" 
+ 
 }
 
 dos.onclick = function dos () {
@@ -61,28 +61,28 @@ cero.onclick = function cero () {
     pantalla.value = pantalla.value + "0"
 }
 
-suma.onclick = function suma () {
-       valor1 = pantalla.value;      
-       simbolo = "+";
-       pantalla.value = "";
+suma.onclick = function suma () {   
+    valor1 = pantalla.value;
+    simbolo = "1";
+    pantalla.value = "";
 }
 
 resta.onclick = function resta () {
     valor1 = pantalla.value;
-    simbolo = "-";
+    simbolo = "2";
     pantalla.value = "";
 }
 
 division.onclick = function divi () {
     valor1 = pantalla.value;
-    simbolo ="/";
+    simbolo ="4";
     pantalla.value = "";
    
 }
 
 multiplicacion.onclick = function multi() {
     valor1 = pantalla.value;
-    simbolo ="/";
+    simbolo ="3";
     pantalla.value = "";
 
 }
@@ -90,7 +90,26 @@ multiplicacion.onclick = function multi() {
 ce.onclick = function ce () {
     pantalla.value = "";
     valor1 = "";
-    valor2 = "";
     simbolo = "";
+}
+igual.onclick = function igual () {
+    if (simbolo == "1"){
+   pantalla.value   = parseInt( valor1 ) + parseInt( pantalla.value );
+   simbolo = "0"
+    }
+    if (simbolo == "2"){
+        pantalla.value = parseInt( valor1 ) - parseInt( pantalla.value );
+        simbolo = "0"
+    }
+    if (simbolo == "3") {
+        pantalla.value = parseInt( valor1 ) * parseInt(pantalla.value );
+        simbolo = "0"
+    }
+   if (simbolo == "4") {
+       pantalla.value = parseInt (valor1 ) / parseInt( pantalla.value);
+       simbolo = "0"
+   }
+  
+
 }
 }
